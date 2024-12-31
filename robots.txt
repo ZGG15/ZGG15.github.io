@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /resume.pdf
+Sitemap: https://zainglover.ca/sitemap.xml
