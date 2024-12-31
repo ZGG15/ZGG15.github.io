@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zain Glover</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="/assets/icon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/icon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/icon/site.webmanifest" />
+</head>
+<body class="bg-gray-50">
+<!-- Navigation -->
+<nav class="fixed w-full bg-gray-900 shadow-sm z-50">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+            <a href="#" class="text-xl font-bold text-white">ZG</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#projects" class="text-gray-300 hover:text-white">Projects</a>
+                <a href="#about" class="text-gray-300 hover:text-white">About</a>
+                <a href="#contact" class="text-gray-300 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="pt-32 pb-24 md:pt-40 md:pb-32 px-4 bg-gray-900">
+    <div class="max-w-6xl mx-auto">
+        <div class="md:flex items-center justify-between gap-8">
+            <div class="md:w-3/5">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                    Engineering Innovation Through Design
+                </h1>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl leading-relaxed">
+                    Hello! I'm Zain, a Research Assistant at Toronto Metropolitan University's Aerospace Engineering Center and a Mechanical Engineering Student at the University of Toronto. I'm passionate about bringing engineering concepts to life through innovative design and practical implementation.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#projects" class="bg-white text-gray-900 px-6 py-3 rounded-lg hover:bg-gray-100 transition">
+                        View Projects
+                    </a>
+                    <a href="#contact" class="border border-white text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition">
+                        Let's Connect
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-2/5 mt-8 md:mt-0">
+                <img src="assets/images/fist.png" alt="Zain's profile photo" class="rounded-2xl shadow-lg w-full max-w-md mx-auto"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-gray-900 mb-12">Featured Projects</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Aerospace Research -->
+            <div class="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                <div class="h-48 bg-gray-200">
+                    <img src="/assets/images/tmu-group.jpg" alt="Aerospace Research" class="w-full h-full object-cover"/>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Aerospace Research @ TMU</h3>
+                    <p class="text-gray-600 mb-4">
+                        Research assistant working on Bombardier-funded aircraft cabin projects, focusing on biomechanical systems for improved passenger comfort.
+                    </p>
+                    <a href="/aerospace-research" class="text-gray-900 font-medium hover:underline">View Details →</a>
+                </div>
+            </div>
+
+            <!-- SuperMileage Vehicle -->
+            <div class="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                <div class="h-48 bg-gray-200">
+                    <img src="/assets/images/super-mileage-vehicle.png" alt="SuperMileage Vehicle" class="w-full h-full object-cover"/>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">UofT SuperMileage Vehicle</h3>
+                    <p class="text-gray-600 mb-4">
+                        Design and development of fuel-efficient vehicle aerobody for Shell Eco Marathon competition, including structural analysis and fabrication.
+                    </p>
+                    <a href="/super-mileage-vehicle" class="text-gray-900 font-medium hover:underline">View Details →</a>
+                </div>
+            </div>
+
+            <!-- Rubik's Cube Solver -->
+            <div class="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                <div class="h-48 bg-gray-200">
+                    <img src="rubiks/images/cad.png" alt="Rubik's Cube Solver" class="w-full h-full object-cover"/>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Automated Rubik's Cube Solver</h3>
+                    <p class="text-gray-600 mb-4">
+                        Development of a mechanical system using Arduino and Python to automatically solve Rubik's cubes through computer vision and robotics.
+                    </p>
+                    <a href="/rubiks" class="text-gray-900 font-medium hover:underline">View Details →</a>
+                </div>
+            </div>
+
+            <!-- OEC Competition -->
+            <div class="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                <div class="h-48 bg-gray-200">
+                    <img src="assets/images/oec.png" alt="Ontario Engineering Competition" class="w-full h-full object-cover object-top "/>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Ontario Engineering Competition</h3>
+                    <p class="text-gray-600 mb-4">
+                        Second place winning solutions for wastewater treatment optimization and sustainable community development at Howe Island.
+                    </p>
+                    <a href="/oec" class="text-gray-900 font-medium hover:underline">View Details →</a>
+                </div>
+            </div>
+
+            <!-- Hart House Theatre -->
+            <div class="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                <div class="h-48 bg-gray-200">
+                    <img src="/assets/images/hart-house-overview.jpg" alt="Hart House Theatre" class="w-full h-full object-cover"/>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Hart House Theatre Accessibility</h3>
+                    <p class="text-gray-600 mb-4">
+                        Led team of first-year students to redesign theatre accessibility features, including wheelchair seating and stage access solutions.
+                    </p>
+                    <a href="/hart-house-accessibility" class="text-gray-900 font-medium hover:underline">View Details →</a>
+                </div>
+            </div>
+
+            <!-- CNC Router -->
+            <div class="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                <div class="h-48 bg-gray-200">
+                    <img src="assets/images/cnc.png" alt="CNC Router" class="w-full h-full object-cover"/>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">DIY CNC Router Design</h3>
+                    <p class="text-gray-600 mb-4">
+                        Led development of cost-effective CNC router design for home hobbyists, featuring aluminum cutting capabilities within a $4,200 budget.
+                    </p>
+                    <a href="/cnc-router" class="text-gray-900 font-medium hover:underline">View Details →</a>
+                </div>
+            </div>
+
+            <!-- Kinematics Car -->
+            <div class="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                <div class="h-48 bg-gray-200">
+                    <img src="assets/images/kinematics-car-cad.png" alt="Kinematics Car" class="w-full h-full object-cover "/>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Arduino Kinematics Car</h3>
+                    <p class="text-gray-600 mb-4">
+                        Designed and built an Arduino-powered car with GPS tracking for real-time kinematic analysis using Python and custom electronics.
+                    </p>
+                    <a href="/kinematics-car" class="text-gray-900 font-medium hover:underline">View Details →</a>
+                </div>
+            </div>
+
+            <!-- ASAP Research -->
+            <div class="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                <div class="h-48 bg-gray-200">
+                    <img src="assets/images/asap-team.jpg" alt="ASAP Research" class="w-full h-full object-cover object-top"/>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">ASAP Research Interface</h3>
+                    <p class="text-gray-600 mb-4">
+                        Developed user interface for research summarization tool for SickKids Hospital, featuring PDF analysis and presentation generation.
+                    </p>
+                    <a href="/asap-research" class="text-gray-900 font-medium hover:underline">View Details →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Repeat for Projects 2-7 with respective image paths -->
+
+
+<section id="about" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="md:flex items-stretch gap-12">
+            <div class="md:w-1/3 mb-8 md:mb-0">
+                <div class="h-full bg-gray-200 rounded-lg overflow-hidden shadow-sm ">
+                    <img src="/assets/images/mask.jpg" alt="Zain Glover" class="w-full h-full object-cover object-right"/>
+                </div>
+            </div>
+            <div class="md:w-2/3">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">About Me</h2>
+                <div class="prose max-w-none">
+                    <p class="text-gray-600 mb-6 text-lg">
+                        I'm a passionate engineer who thrives on turning complex problems into elegant solutions. Through my work at TMU's Aerospace Engineering Center and my studies at UofT, I've developed a strong foundation in mechanical engineering principles and their practical applications.
+                    </p>
+                    <p class="text-gray-600 mb-6 text-lg">
+                        I'm always excited to take on new engineering challenges and collaborate on innovative projects. Whether it's designing mechanical systems, optimizing processes, or solving complex engineering problems, I bring dedication and creativity to every project.
+                    </p>
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="/resume.pdf" target="_blank" class="inline-flex items-center px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            Resume
+                        </a>
+                        <a href="https://linkedin.com/in/zain-glover" target="_blank" class="inline-flex items-center px-6 py-3 border border-gray-900 text-gray-900 rounded-lg hover:bg-gray-50 transition">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                            </svg>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Let's Connect</h2>
+        <p class="text-xl text-gray-600 mb-8">
+            I'm always looking for exciting engineering opportunities and collaborations. Feel free to reach out!
+        </p>
+        <div class="inline-flex items-center px-6 py-3 bg-gray-900 text-white rounded-lg">
+            <span class="text-lg">Contact me at: zainglover15 (at) gmail (dot) com</span>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-8">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center">
+            <p>© 2024 Zain Glover</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

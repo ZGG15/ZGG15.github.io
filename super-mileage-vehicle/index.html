@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTSM SuperMileage - Zain Glover</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/icon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/icon/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/icon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icon/apple-touch-icon.png" />
+    <link rel="manifest" href="../assets/icon/site.webmanifest"/>
+</head>
+<body class="bg-gray-50">
+<!-- Navigation -->
+<nav class="fixed w-full bg-gray-900 shadow-sm z-50">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+            <a href="/" class="text-xl font-bold text-white">ZG</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="/" class="inline-flex items-center text-gray-300 hover:text-white">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Project Hero -->
+<section class="pt-32 pb-16 md:pt-40 md:pb-20 px-4 bg-gray-900">
+    <div class="max-w-6xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">
+            UofT SuperMileage
+        </h1>
+        <p class="text-xl text-gray-300 mb-8 max-w-2xl">
+            Designing and fabricating aerodynamic vehicle bodies for the Shell Eco Marathon competition as part of the Aerostructural Division.
+        </p>
+    </div>
+</section>
+
+<!-- Main Content -->
+<section class="py-12 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-12">
+            <!-- Main Content -->
+            <div class="md:col-span-2">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Project Overview</h2>
+                <div class="prose max-w-none">
+                    <p class="text-gray-600 mb-6">
+                        At University of Toronto SuperMileage (UTSM), we design fuel efficient vehicles that race in a yearly competition, the Shell Eco Marathon. As a part of the Aerostructural Division, our job is to design, develop, and manufacture our vehicle's aerobody. This includes shape and material selection, conducting physical simulation analyses, and hands-on fabrication involving a lot of teamwork. I have really enjoyed working with my teammates and seeing our vehicle come to life!
+                    </p>
+
+                    <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Structural Analyses (FEA)</h3>
+                    <p class="text-gray-600 mb-6">
+                        To find the maximum weight of inner body components, such as the electrical shelves, steering system, and driver, I used Ansys Mechanical and set up a static simulation to identify maximum loads across the monocoque. The first video shows the maximum weight from the driver's position the monocoque can endure before deforming. The image is the back shelf of the aerobody under a distributed load meant to represent the weight of the electric-powertrain.
+                    </p>
+
+                    <div class="aspect-w-16 aspect-h-9 mb-6">
+                        <iframe
+                                class="w-full h-96 rounded-lg"
+                                src="https://www.youtube.com/embed/92mmrQrN4CE"
+                                title="Structural Analysis Video"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Aerodynamic Analyses</h3>
+                    <p class="text-gray-600 mb-6">
+                        In order to create a fuel efficient and mobile vehicle, we must create a car shape that is aerodynamic. I used Ansys Fluent to conduct CFD simulations on the vehicle to identify aerodynamically-flawed components. Once identified, these surfaces were made flush with surrounding areas or edited to reduce air accumulation.
+                    </p>
+
+                    <div class="bg-gray-200 rounded-lg overflow-hidden mb-6">
+                        <img src="images/cfd.png" alt="CFD Analysis" class="w-full   "/>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Plug Fabrication</h3>
+                    <p class="text-gray-600 mb-6">
+                        In order to make the monocoque of the vehicle, we must first make a plug body to base the monocoque from. This was done by using a CNC mill to cut foam pieces into smaller segments of the plug, which were then epoxied together and sanded. This is a very long process that lasted ~2 months, however it was worth it as our team was able to ensure a perfectly smooth aerobody.
+                    </p>
+
+                    <div class="aspect-w-16 aspect-h-9 mb-6">
+                        <iframe
+                                class="w-full h-96 rounded-lg"
+                                src="https://www.youtube.com/embed/cg7fDnocmyw"
+                                title="CNC Milling Process"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 mb-6">
+                        <div class="bg-gray-200 rounded-lg overflow-hidden">
+                            <img src="images/sanding-1.jpg" alt="First Round of Sanding" class="w-full h-full object-cover"/>
+                        </div>
+                        <div class="bg-gray-200 rounded-lg overflow-hidden">
+                            <img src="images/sanding-2.jpg" alt="Even More Sanding" class="w-full h-full object-cover"/>
+                        </div>
+                    </div>
+
+
+                    <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Monocoque Fabrication</h3>
+                    <p class="text-gray-600 mb-6">
+                        The last part of creating the monocoque is laying up carbon fiber across the foam plug and fibreglass layers. This creates the strong and lightweight aerobody used in competition. As of Jan 2025, this process is still ongoing however the start of layups are shown below.
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-8 mb-6">
+                        <div class="bg-gray-200 rounded-lg overflow-hidden">
+                            <img src="images/carbon-1.png" alt="Carbon Fiber Layup 1" class="w-full h-full object-cover"/>
+                        </div>
+                        <div class="bg-gray-200 rounded-lg overflow-hidden">
+                            <img src="images/carbon-2.png" alt="Carbon Fiber Layup 2" class="w-full h-full object-cover"/>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div>
+                <div class="bg-gray-50 rounded-lg p-6 shadow-sm sticky top-24">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">Project Details</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-sm font-medium text-gray-500">Role</h4>
+                            <p class="text-gray-900">Aerostructural Division Member</p>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-medium text-gray-500">Focus Areas</h4>
+                            <ul class="mt-2 space-y-2">
+                                <li class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-700 mr-2">FEA Analysis</li>
+                                <li class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-700 mr-2">CFD Simulation</li>
+                                <li class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-700 mr-2">Manufacturing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-8">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center">
+            <p>© 2024 Zain Glover</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
