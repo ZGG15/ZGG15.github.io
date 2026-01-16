@@ -65,7 +65,7 @@
 
           <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Design Alternatives</h3>
 
-
+          <div class="space-y-6">
             <div class="bg-gray-50 p-6 rounded-lg">
               <h4 class="text-lg font-bold text-gray-900 mb-3">Fast Papers</h4>
               <img src="images/fast-papers.png" alt="Fast Papers Design" class="w-full rounded-lg mb-4"/>
@@ -90,14 +90,11 @@
               <h4 class="text-lg font-bold text-gray-900 mb-3">PSPro</h4>
               <img src="images/ps-pro.png" alt="PSPro Design" class="w-full rounded-lg mb-4"/>
               <p class="text-gray-600 text-sm">PSPro emphasized presentation generation capabilities.</p>
-
             </div>
           </div>
-
-
+        </div>
       </div>
 
-      <!-- Sidebar -->
       <!-- Sidebar -->
       <div>
         <div class="bg-gray-50 rounded-lg p-6 shadow-sm sticky top-24">
@@ -145,9 +142,13 @@
 <footer class="bg-gray-900 text-white py-8">
   <div class="max-w-6xl mx-auto px-4">
     <div class="flex justify-between items-center">
-      <p>© 2024 Zain Glover</p>
+      <p>© <span id="year"></span> Zain Glover</p>
     </div>
   </div>
 </footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>

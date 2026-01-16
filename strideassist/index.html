@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StrideAssist - Zain Glover</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
+    <link rel="icon" type="image/png" href="../assets/icon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/icon/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/icon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icon/apple-touch-icon.png" />
+    <link rel="manifest" href="../assets/icon/site.webmanifest"/>
+</head>
+<body class="bg-gray-50">
+<!-- Navigation -->
+<nav class="fixed w-full bg-gray-900 shadow-sm z-50">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+            <a href="/" class="text-xl font-bold text-white">ZG</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="/" class="inline-flex items-center text-gray-300 hover:text-white">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Project Hero -->
+<section class="pt-32 pb-16 md:pt-40 md:pb-20 px-4 bg-gray-900">
+    <div class="max-w-6xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">
+            StrideAssist - Adaptable Walking Exoskeleton
+        </h1>
+        <p class="text-xl text-gray-300 mb-8 max-w-2xl">
+            A below-waist exoskeleton with adjustable lumbar width and leg-link mechanisms to support users with varying lower-limb lengths and mobility impairments
+        </p>
+    </div>
+</section>
+
+<!-- Main Content -->
+<section class="py-12 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-12">
+            <!-- Main Content -->
+            <div class="md:col-span-2">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Project Overview</h2>
+                <div class="prose max-w-none">
+                    <p class="text-gray-600 mb-6">
+                        This project focused on the design of a modular, below-waist exoskeleton intended to assist walking for users with a wide range of lower-body dimensions, including individuals with no amputation, below-knee amputation, or above-knee amputation. Existing exoskeletons are typically built for a single user profile, so the primary goal was to create a single platform that could be adjusted geometrically without compromising gait stability or comfort. Initial work involved reviewing current market designs and defining key requirements around adjustability, biomechanical alignment, and cost.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        The mechanical design was developed in SolidWorks and included adjustable lumbar plates, push-pin leg linkages, and a motor-driven transmission system. To generate a realistic walking motion, the exoskeleton was modelled as a rocker–rocker four-bar linkage. Kinematic and velocity-polygon analysis was used to select link proportions, evaluate transmission angles, and determine the motor oscillation frequency required to achieve an average walking speed of 0.82 m/s. The resulting relationship allowed the system to scale automatically based on the user’s leg length while maintaining consistent gait behaviour.                    </p>
+                    <div class="aspect-w-16 aspect-h-9 mb-6">
+                        <div class="bg-gray-200 rounded-lg overflow-hidden">
+                            <img src="images/final-product.png" alt="Final Product" class="w-full h-full "/>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Mechanical Design</h3>
+                    <p class="text-gray-600 mb-6">
+                        There are several features that improve the comfort and customizability of StrideAssist to allow usage for any person. As shown below,  the width of the exoskeleton can be controlled through 8 M6 screws, enabling a lumbar width of 21.5 cm - 50.0 cm. This adjustability is critical as the adult lumbar width across the general population varies from approximately 21.5 cm to 50 cm depending on sex and body mass index.
+                    </p>
+
+                    <div class="flex justify-center mb-3">
+                        <div class="bg-gray-200 rounded-lg overflow-hidden max-w-md">
+                            <img src="images/lumbar-support-customizability.png" alt="Lumbar Support Customizability" class="w-full h-full object-cover"/>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-600 mb-6">
+                    The length of the above and below knee links in addition to their support links can be controlled through spring-loaded push-pins, similar to what is found in crutches. Moreover, straps are located at the bottom of each joint to attach to the user. This allows the total length of the leg joints to vary between 33.0 cm - 62.5 cm. Ultimately this can accommodate users with a short or tall stature, and also those with limb-length discrepancies such as those with amputations.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-8 mb-6">
+                        <div class="bg-gray-200 rounded-lg overflow-hidden">
+                            <img src="images/link-mechanism.png" alt="Link Mechanism" class="w-full h-full object-cover object-top "/>
+                        </div>
+                        <div class="bg-gray-200 rounded-lg overflow-hidden">
+                            <img src="images/link-length-variability-mechanism.png" alt="Link Length Variability Mechanism" class="w-full h-full  object-cover"/>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                    The figures below provide an outline of the link’s transmission. A NEMA 34 Stepper Motor (1) is bound to an M8 shoulder head screw (3) using a bore clamping shaft coupler (2). This prevents relative motion between the screw and motor. The shoulder head screw is press-fit into a bushing (4) in the nearby link, and the bushing is press-fit and epoxied into the nearby link (the leftmost link in the left figure). Therefore, the link has no relative motion to the motor. The shoulder screw continues into the outermost link (on the right figure), fitting through a second, looser bushing (5), before being closed by a locknut (6). This transmission system prevents slippage between the motor and the input link while allowing free movement of the second link. Note that all other linkage bindings throughout other joints are equal to the transmission’s bindings, except for using the looser bushing (5) for both links, and of course, not including a motor or coupler. This allows the input link to drive all other links.
+                    </p>
+                    <div class="bg-gray-200 rounded-lg overflow-hidden">
+                        <img src="images/sectioned-transmission-system.png" alt="Sectioned Transmission System" class="w-full h-full object-cover"/>
+                    </div></div>
+                    <div class="aspect-w-16 aspect-h-9 mb-6">
+                        <div class="bg-gray-200 rounded-lg overflow-hidden">
+                            <img src="images/transmission-perspective-view.png" alt="Transmission Perspective View" class="w-full h-full "/>
+                        </div>
+                    </div>
+
+
+
+                    <h3 class="text-xl font-bold text-gray-900 mt-8 mb-4">Kinematic Analysis</h3>
+                    <p class="text-gray-600 mb-6">
+                        For the walking motion, the goal is to have a customizable input that moves the foot at an average walking speed of 0.82 m/s. In this case the input is a motor that oscillates the thigh back and forth. The mechanism will operate as a rocker-rocker four-bar linkage, seen below. To achieve customizability, we need an algorithm that takes height parameters as inputs and outputs an appropriate frequency to oscillate the motor that generates the correct angular motion in the thigh, which will produce an average foot speed.
+                    </p>
+                <div class="flex justify-center mb-3">
+                    <div class="bg-gray-200 rounded-lg overflow-hidden max-w-md">
+                        <img src="images/stick-diagram-of-mechanism.jpg" alt="Stick Diagram of Mechanism" class="w-full h-full object-cover"/>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6">
+                    A typical person, regardless of size, has a total thigh swing of 40 degrees when walking. Therefore, the amplitude phased into the code is a constant 40 degrees. Now the question becomes: What frequency should be input into the code to achieve normal walking speed? We look at the configuration of the mechanism when the angular velocity is at its peak. This occurs when the thigh angle measured from the vertical to the thigh \(\theta_2\) is at half the amplitude, 20 degrees. We also approximate that at this position the foot speed is at the average walking speed 0.82m/s. The equation for this maximum angular velocity is:
+                </p>
+
+                <div class="text-center mb-6">
+                    $$\dot{\theta}_{2,Max} = 2\pi f_A$$
+                </div>
+
+                <p class="text-gray-600 mb-6">
+                    We make the approximation that link lengths of links one and two are the same, \(L_1\), as they are for most humans. Therefore, we take links three and four to be the shortest and longest links, respectively. To make sure this 4 bar behaves as a rocker-rocker:
+                </p>
+
+                <div class="text-center mb-6">
+                    $$(L_3 + L_4) > (L_1 + L_2)$$
+                </div>
+
+                <p class="text-gray-600 mb-6">
+                    To uphold this condition we choose \(L_3 = 0.9L_1\) and \(L_4 = 1.20L_1\). Choosing link 3 to be nearly as long as the main links and link 4 to be the longest link keeps the four-bar in a geometry that maintains favorable transmission angles throughout motion. This improves w efficiently the mechanism can transmit forces and resist external loads, avoiding weak “toggle-like” positions. As a result, the linkage provides greater stiffness, smoother torque transfer, and better overall support for an exoskeleton application.
+
+
+                <p class="text-gray-600 mb-6">
+                We have now reduced the problem to the velocity polygon problem shown below.
+
+            </p>
+                <div class="flex justify-center mb-3">
+                    <div class="bg-gray-200 rounded-lg overflow-hidden max-w-md">
+                        <img src="images/velocity-polygon-problem.png" alt="Velocity Polygon Problem" class="w-full h-full object-cover"/>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6">
+                    Using the relative velocity equation between points A and B, the solved velocity polygon is shown below. The result is \(|V_B| = |V_{foot}| = 1.24mL_1fA\). As previously stated, the forward velocity needs to be 0.82m/s. This gives the following relation, assuming length length is approx \(2L_1\):
+                </p>
+
+                <div class="text-center mb-6">
+                    $$0.82 = V_{foot}\cos28 = (1.24mL_1fA)\cos60 \rightarrow f = \frac{1.64}{1.24 \times (\text{leg length}) \times \cos28} $$
+                </div>
+
+                <p class="text-gray-600 mb-6">
+                    This gives us an equation for the proper frequency that the motor should oscillate at to achieve normal walking motion, based on the user's input leg length. This formula is added to the Arduino code, so the user only has to plug in their leg length, and the output should be the motor oscillating at the proper frequency. Note amplitude is a constant for any user.
+                </p>
+                <div class="flex justify-center mb-5">
+                    <div class="bg-gray-200 rounded-lg overflow-hidden max-w-l">
+                        <img src="images/velocity-polygon.jpg" alt="Velocity Polygon" class="w-full h-full object-cover"/>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div>
+                <div class="bg-gray-50 rounded-lg p-6 shadow-sm sticky top-24">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">Project Details</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-sm font-medium text-gray-500">Project Type</h4>
+                            <p class="text-gray-900">Design & Development</p>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-medium text-gray-500">Technologies Used</h4>
+                            <ul class="mt-2 space-y-2">
+                                <li class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-700 mr-2">SolidWorks</li>
+                                <li class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-700 mr-2">Motion Systems</li>
+                                <li class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-700 mr-2">Kinematic Analysis</li>
+                                <li class="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-700 mr-2">CAD Design</li>
+                            </ul>
+                        </div>
+                        <div class="pt-4">
+                            <a href="reports/MIE301-Final-Report.pdf"
+                               class="inline-flex items-center w-full px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition text-sm">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                </svg>
+                                View Full Report
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-8">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center">
+            <p>© <span id="year"></span> Zain Glover</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

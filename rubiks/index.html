@@ -128,9 +128,13 @@
 <footer class="bg-gray-900 text-white py-8">
     <div class="max-w-6xl mx-auto px-4">
         <div class="flex justify-between items-center">
-            <p>© 2024 Zain Glover</p>
+            <p>© <span id="year"></span> Zain Glover</p>
         </div>
     </div>
 </footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
