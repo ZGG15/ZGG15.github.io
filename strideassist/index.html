@@ -54,7 +54,8 @@
                         This project focused on the design of a modular, below-waist exoskeleton intended to assist walking for users with a wide range of lower-body dimensions, including individuals with no amputation, below-knee amputation, or above-knee amputation. Existing exoskeletons are typically built for a single user profile, so the primary goal was to create a single platform that could be adjusted geometrically without compromising gait stability or comfort. Initial work involved reviewing current market designs and defining key requirements around adjustability, biomechanical alignment, and cost.
                     </p>
                     <p class="text-gray-600 mb-6">
-                        The mechanical design was developed in SolidWorks and included adjustable lumbar plates, push-pin leg linkages, and a motor-driven transmission system. To generate a realistic walking motion, the exoskeleton was modelled as a rocker–rocker four-bar linkage. Kinematic and velocity-polygon analysis was used to select link proportions, evaluate transmission angles, and determine the motor oscillation frequency required to achieve an average walking speed of 0.82 m/s. The resulting relationship allowed the system to scale automatically based on the user’s leg length while maintaining consistent gait behaviour.                    </p>
+                        The mechanical design was developed in SolidWorks and included adjustable lumbar plates, push-pin leg linkages, and a motor-driven transmission system. To generate a realistic walking motion, the exoskeleton was modelled as a rocker–rocker four-bar linkage. Kinematic and velocity-polygon analysis was used to select link proportions, evaluate transmission angles, and determine the motor oscillation frequency required to achieve an average walking speed of 0.82 m/s. The resulting relationship allowed the system to scale automatically based on the user's leg length while maintaining consistent gait behaviour.
+                    </p>
                     <div class="aspect-w-16 aspect-h-9 mb-6">
                         <div class="bg-gray-200 rounded-lg overflow-hidden">
                             <img src="images/final-product.png" alt="Final Product" class="w-full h-full "/>
@@ -84,11 +85,11 @@
                         </div>
                     </div>
                     <p class="text-gray-600 mb-6">
-                    The figures below provide an outline of the link’s transmission. A NEMA 34 Stepper Motor (1) is bound to an M8 shoulder head screw (3) using a bore clamping shaft coupler (2). This prevents relative motion between the screw and motor. The shoulder head screw is press-fit into a bushing (4) in the nearby link, and the bushing is press-fit and epoxied into the nearby link (the leftmost link in the left figure). Therefore, the link has no relative motion to the motor. The shoulder screw continues into the outermost link (on the right figure), fitting through a second, looser bushing (5), before being closed by a locknut (6). This transmission system prevents slippage between the motor and the input link while allowing free movement of the second link. Note that all other linkage bindings throughout other joints are equal to the transmission’s bindings, except for using the looser bushing (5) for both links, and of course, not including a motor or coupler. This allows the input link to drive all other links.
+                    The figures below provide an outline of the link's transmission. A NEMA 34 Stepper Motor (1) is bound to an M8 shoulder head screw (3) using a bore clamping shaft coupler (2). This prevents relative motion between the screw and motor. The shoulder head screw is press-fit into a bushing (4) in the nearby link, and the bushing is press-fit and epoxied into the nearby link (the leftmost link in the left figure). Therefore, the link has no relative motion to the motor. The shoulder screw continues into the outermost link (on the right figure), fitting through a second, looser bushing (5), before being closed by a locknut (6). This transmission system prevents slippage between the motor and the input link while allowing free movement of the second link. Note that all other linkage bindings throughout other joints are equal to the transmission's bindings, except for using the looser bushing (5) for both links, and of course, not including a motor or coupler. This allows the input link to drive all other links.
                     </p>
-                    <div class="bg-gray-200 rounded-lg overflow-hidden">
+                    <div class="bg-gray-200 rounded-lg overflow-hidden mb-6">
                         <img src="images/sectioned-transmission-system.png" alt="Sectioned Transmission System" class="w-full h-full object-cover"/>
-                    </div></div>
+                    </div>
                     <div class="aspect-w-16 aspect-h-9 mb-6">
                         <div class="bg-gray-200 rounded-lg overflow-hidden">
                             <img src="images/transmission-perspective-view.png" alt="Transmission Perspective View" class="w-full h-full "/>
@@ -110,25 +111,24 @@
                     A typical person, regardless of size, has a total thigh swing of 40 degrees when walking. Therefore, the amplitude phased into the code is a constant 40 degrees. Now the question becomes: What frequency should be input into the code to achieve normal walking speed? We look at the configuration of the mechanism when the angular velocity is at its peak. This occurs when the thigh angle measured from the vertical to the thigh \(\theta_2\) is at half the amplitude, 20 degrees. We also approximate that at this position the foot speed is at the average walking speed 0.82m/s. The equation for this maximum angular velocity is:
                 </p>
 
-                <div class="text-center mb-6">
-                    $$\dot{\theta}_{2,Max} = 2\pi f_A$$
+                <div class="flex justify-center mb-6">
+                    <img src="images/equation-1.png" alt="Equation 1" class="max-w-full h-auto"/>
                 </div>
 
                 <p class="text-gray-600 mb-6">
                     We make the approximation that link lengths of links one and two are the same, \(L_1\), as they are for most humans. Therefore, we take links three and four to be the shortest and longest links, respectively. To make sure this 4 bar behaves as a rocker-rocker:
                 </p>
 
-                <div class="text-center mb-6">
-                    $$(L_3 + L_4) > (L_1 + L_2)$$
+                <div class="flex justify-center mb-6">
+                    <img src="images/equation-2.png" alt="Equation 2" class="max-w-full h-auto"/>
                 </div>
 
                 <p class="text-gray-600 mb-6">
-                    To uphold this condition we choose \(L_3 = 0.9L_1\) and \(L_4 = 1.20L_1\). Choosing link 3 to be nearly as long as the main links and link 4 to be the longest link keeps the four-bar in a geometry that maintains favorable transmission angles throughout motion. This improves how efficiently the mechanism can transmit forces and resist external loads, avoiding weak “toggle-like” positions. As a result, the linkage provides greater stiffness, smoother torque transfer, and better overall support for an exoskeleton application.
-
+                    To uphold this condition we choose \(L_3 = 0.9L_1\) and \(L_4 = 1.20L_1\). Choosing link 3 to be nearly as long as the main links and link 4 to be the longest link keeps the four-bar in a geometry that maintains favorable transmission angles throughout motion. This improves how efficiently the mechanism can transmit forces and resist external loads, avoiding weak "toggle-like" positions. As a result, the linkage provides greater stiffness, smoother torque transfer, and better overall support for an exoskeleton application.
+                </p>
 
                 <p class="text-gray-600 mb-6">
                 We have now reduced the problem to the velocity polygon problem shown below.
-
             </p>
                 <div class="flex justify-center mb-3">
                     <div class="bg-gray-200 rounded-lg overflow-hidden max-w-md">
@@ -139,8 +139,8 @@
                     Using the relative velocity equation between points A and B, the solved velocity polygon is shown below. The result is \(|V_B| = |V_{foot}| = 1.24mL_1fA\). As previously stated, the forward velocity needs to be 0.82m/s. This gives the following relation, assuming length length is approx \(2L_1\):
                 </p>
 
-                <div class="text-center mb-6">
-                    $$0.82 = V_{foot}\cos28 = (1.24mL_1fA)\cos60 \rightarrow f = \frac{1.64}{1.24 \times (\text{leg length}) \times \cos28} $$
+                <div class="flex justify-center mb-6">
+                    <img src="images/equation-3.png" alt="Equation 3" class="max-w-full h-auto"/>
                 </div>
 
                 <p class="text-gray-600 mb-6">
@@ -150,6 +150,7 @@
                     <div class="bg-gray-200 rounded-lg overflow-hidden max-w-l">
                         <img src="images/velocity-polygon.jpg" alt="Velocity Polygon" class="w-full h-full object-cover"/>
                     </div>
+                </div>
                 </div>
             </div>
 
